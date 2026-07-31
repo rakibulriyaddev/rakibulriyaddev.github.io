@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Nav from "./components/Nav";
 
 const skills = [
   "C++",
@@ -76,19 +77,7 @@ const highlights = [
 export default function Home() {
   return (
     <main className="flex-1 bg-white text-gray-900 dark:bg-slate-900 dark:text-slate-200">
-      {/* Nav */}
-      <header className="sticky top-0 z-10 border-b border-gray-200 bg-white/80 backdrop-blur dark:border-slate-700 dark:bg-slate-900/80">
-        <nav className="mx-auto flex max-w-5xl items-center gap-4 px-6 py-4">
-          <span className="shrink-0 font-semibold whitespace-nowrap">Rakibul Islam</span>
-          <div className="flex flex-1 gap-6 overflow-x-auto text-sm whitespace-nowrap">
-            <a href="#skills" className="hover:text-emerald-500">Skills</a>
-            <a href="#experience" className="hover:text-emerald-500">Experience</a>
-            <a href="#education" className="hover:text-emerald-500">Education</a>
-            <a href="#achievements" className="hover:text-emerald-500">Achievements</a>
-            <a href="#contact" className="hover:text-emerald-500">Contact</a>
-          </div>
-        </nav>
-      </header>
+      <Nav />
 
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-6 py-20">
