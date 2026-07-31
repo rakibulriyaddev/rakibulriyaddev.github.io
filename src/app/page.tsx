@@ -41,7 +41,7 @@ const projects = [
   {
     title: "TrackMate",
     description:
-      "Real-time location-sharing and group chat mobile app. ASP.NET Core backend (MongoDB, JWT with refresh-token rotation, SignalR) with a Flutter/Android client (Riverpod, GoRouter, Dio). Live location tracking over SignalR with background location upload, group chat, and OAuth-based authentication. Deployed to an Oracle Cloud VM behind nginx, with CI on GitHub Actions covering backend build and frontend analyze/test.",
+      "A mobile app for sharing your live location with friends or family and chatting in groups in real time — similar to how location sharing works in apps like WhatsApp or Google Maps, but built from scratch with secure sign-in.",
     tags: ["ASP.NET Core", "MongoDB", "Flutter"],
   },
 ];
