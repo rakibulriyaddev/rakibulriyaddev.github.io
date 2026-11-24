@@ -42,7 +42,7 @@ const projects = [
     title: "TrackMate",
     description:
       "A mobile app for sharing your live location with friends or family and chatting in groups in real time — similar to how location sharing works in apps like WhatsApp or Google Maps, but built from scratch with secure sign-in.",
-    tags: ["ASP.NET Core", "MongoDB", "Flutter"],
+    tags: ["ASP.NET Core", "MongoDB", "SignalR", "Kotlin", "Jetpack Compose"],
   },
 ];
 
