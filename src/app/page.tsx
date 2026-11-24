@@ -1,8 +1,16 @@
 import Image from "next/image";
 import Nav from "./components/Nav";
 
+// Evaluated at build time (static export), so it refreshes on every deploy.
+const CAREER_START = new Date(2024, 0, 1); // Orbitax, Jan 2024
+const yearsOfExperience = Math.floor(
+  (Date.now() - CAREER_START.getTime()) / (365.25 * 24 * 60 * 60 * 1000),
+);
+
 const skills = [
+  "C",
   "C++",
+  "Java",
   "Python",
   ".NET",
   "Angular",
@@ -56,7 +64,7 @@ const education = [
 ];
 
 const programmingProfiles = [
-  "Codeforces: Expert (max rating 1890), 3317+ problems solved",
+  "Codeforces: Expert (max rating 1890), 3340+ problems solved",
   "CodeChef: 5-star (max rating 2065), 158+ problems solved",
   "ICPC: 2 times Asia-West Continent Finalist, 3 times ICPC Regionalist",
 ];
@@ -69,7 +77,7 @@ const honors = [
 
 const highlights = [
   "Software Engineer building production web applications with .NET, Angular, and MongoDB.",
-  "Strong competitive programming foundation: Codeforces Expert and CodeChef 5-star.",
+  "Strong competitive programming foundation: peak Codeforces Expert and CodeChef 5-star.",
   "Multiple-time ICPC regionalist and Asia-West Continent Finalist.",
   "Shipped TrackMate end-to-end — backend, mobile client, deployment, and CI.",
 ];
@@ -105,7 +113,7 @@ export default function Home() {
               .NET · Angular · MongoDB
             </p>
             <p className="mt-2 text-sm text-gray-500">
-              Dhaka, Bangladesh · 2+ years of experience
+              Dhaka, Bangladesh · {yearsOfExperience}+ years of experience
             </p>
             <p className="mt-6 max-w-2xl text-gray-600 dark:text-slate-400">
               Software Engineer with hands-on experience building web
@@ -152,7 +160,7 @@ export default function Home() {
                 ["Company", "Orbitax Bangladesh Limited"],
                 ["Experience", "Jan 2024 — Present"],
                 ["Focus", ".NET · Angular · MongoDB"],
-                ["Competitive", "Codeforces Expert (1890)"],
+                ["Competitive", "Codeforces Expert (max 1890)"],
               ].map(([label, value]) => (
                 <div key={label} className="flex justify-between gap-4">
                   <dt className="text-gray-500">{label}</dt>
